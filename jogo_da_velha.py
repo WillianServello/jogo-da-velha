@@ -26,7 +26,7 @@ def get_input_valido(mensagem):
     try:
         numero = int(input(mensagem))
 
-        if(numero >= and numero <= 3):
+        if(numero >= 1 and numero <= 3):
             return numero - 1
         else:
             print("Número precisa estar entre 1 e 3")
@@ -46,14 +46,14 @@ def faz_movimento(board, i, j, jogador):
     board[i][j] = token[jogador]
 
 #função para definir o ganhador
-def verifica_ganhador(board)
+def verifica_ganhador(board):
     #estrutura da linha
-    for i in range(3)
-        if(board[i][0] == board[i][1] and board[i][1] == board[i][2] == and board[i][0] != branco):
+    for i in range(3):
+        if(board[i][0] == board[i][1] and board[i][1] == board[i][2] and board[i][0] != branco):
             return board[i][0]
     #estutura da coluna
-    for i in range(3)
-        if(board[0][i] == board[1][i] and board[1][i] == board[2][i] == and board[0][i] != branco):
+    for i in range(3):
+        if(board[0][i] == board[1][i] and board[1][i] == board[2][i] and board[0][i] != branco):
             return board[0][i]
 
     #estutura da diagonal principal
